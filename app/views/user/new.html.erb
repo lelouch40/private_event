@@ -1,0 +1,19 @@
+<div>
+<h2> Create User </h2>
+<%= form_for(:attendee, :url=> {:action => 'create'}) do |f| %>
+	    <table>
+      <tr>
+        <th>Name</th>
+        <%=f.text_field(:name)%>
+    </tr>
+    <tr>
+    	<th> Email </th>
+    	<tr>
+    		<%= f.text_field(:email)%>
+        <% end %>
+    		</tr>
+    	</table>
+     <div class="form-buttons">
+      <%= submit_tag("Create User") %>
+    </div>
+</div>

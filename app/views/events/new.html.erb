@@ -1,0 +1,21 @@
+
+<h2> Create Event </h2>
+<table summary="Section form fields">
+<%= form_for(:event, :url => {:action => "create"}) do |event| %>
+<tr>
+    <th><%= event.label(:description) %></th>
+    <td><%= event.text_area(:description) %></td>
+  </tr>
+  <tr>
+    <th><%= event.label(:place) %></th>
+    <td><%= event.text_field(:place) %></td>
+  </tr>
+  <tr>
+      <th><%= event.label(:time) %></th>
+    <td><%= event.datetime_select(:time) %></td>
+</tr>
+  <div>
+  	      <%= submit_tag("Create Event") %>
+  	  </div>
+  <%end%>
+  </table>

@@ -1,0 +1,15 @@
+<%= error_messages_for(@event) %>
+<div>
+<h2> Create Invite </h2>
+<%= form_for(:invite, :url=> {:action => 'create'}) do |f| %>
+	    <table>
+      <tr>
+        <th>To: </th>
+        <%=f.label :summary %>
+        <%=f.text_field(:summary)%>
+    </tr>
+    	</table>
+      <%= submit_tag("Send Invite") %>
+    </div>
+    <%end%>
+</div>

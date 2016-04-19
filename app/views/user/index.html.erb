@@ -1,0 +1,21 @@
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    <% @user.each do |user| %>
+    <tr>
+      <td><%= user.username %></td>
+      <td><%= user.email %></td>
+      <td class="actions">
+      <%= link_to("Show", {:action => 'show', :id => user.id}, :class => 'action show') %>
+    </td>
+
+</tr>
+<%end%>
+      <% if current_user %>
+         <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+         <% else%>
+         <%=link_to "Log in", :controller=> "users", :action=> "sign_in" %>
+        <%end%>
+</table>

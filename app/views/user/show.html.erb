@@ -1,0 +1,14 @@
+        <h2>User's events<h2>
+  <h2>Show Events</h2>
+  <%@event=Event.all%>
+  <table summary="Subject detail view">
+  	<th> Place </th>
+  	<th> Time </th>
+    <tr>
+      <% @user.events.each do |event| %>
+      <td><%= event.place %></td>
+      <td><%= event.created_at %></td>
+
+      <%end%>
+    </tr>
+    </table>
